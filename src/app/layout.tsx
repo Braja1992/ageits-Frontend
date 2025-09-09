@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { AntdRegistry } from '@ant-design/nextjs-registry';
+import ScrollToTop from '@/components/common/ScrollToTop';
 import './globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -70,17 +71,88 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  // Organization structured data for SEO
+  const organizationData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Ananta Gopal Enterprises",
+    "url": process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
+    "logo": `${process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"}/logo.jpg`,
+    "description": "Professional business services with quality products and exceptional customer service. Specializing in IT services, cybersecurity, cloud solutions, and comprehensive business technology solutions.",
+    "foundingDate": "2015",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+91-8917297392",
+      "contactType": "customer service",
+      "availableLanguage": "English"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "IN"
+    },
+    "sameAs": [
+      // Add social media URLs when available
+      // "https://facebook.com/anantagopal",
+      // "https://twitter.com/anantagopal",
+      // "https://linkedin.com/company/anantagopal"
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "IT Services & Products",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Computer & Laptop Solutions",
+            "description": "Professional computer and laptop repair, sales, and maintenance services"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Cybersecurity Solutions",
+            "description": "Comprehensive cybersecurity services including firewall setup and antivirus protection"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Cloud Solutions",
+            "description": "Cloud migration, backup, and infrastructure management services"
+          }
+        }
+      ]
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "150",
+      "bestRating": "5",
+      "worstRating": "1"
+    }
+  };
+
   return (
     <html lang="en">
       <head>
         <link rel="icon" href="/logo.jpg" type="image/jpeg" />
         <link rel="apple-touch-icon" href="/logo.jpg" />
         <meta name="theme-color" content="#ffffff" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationData),
+          }}
+        />
       </head>
       <body className={inter.className}>
         <AntdRegistry>
           {children}
         </AntdRegistry>
+        <ScrollToTop />
       </body>
     </html>
   );

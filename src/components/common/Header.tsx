@@ -33,6 +33,7 @@ const Header: React.FC = () => {
     { name: 'About', href: '/about' },
     { name: 'Services', href: '/services' },
     { name: 'Products', href: '/products' },
+    { name: 'Students', href: '/students' },
     { name: 'Contact', href: '/contact' },
   ];
 
@@ -131,7 +132,7 @@ const Header: React.FC = () => {
                   }`}
                 >
                   {item.name}
-                  <span 
+                  <span
                     className={`absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full ${
                       pathname === item.href ? 'w-full' : ''
                     }`}

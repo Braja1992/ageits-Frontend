@@ -15,7 +15,7 @@ const nextConfig = {
 
   // Experimental features for better SEO
   experimental: {
-    optimizeCss: true,
+    // optimizeCss: true, // Disabled to prevent critters module error
     scrollRestoration: true,
   },
 

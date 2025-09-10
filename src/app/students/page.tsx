@@ -17,8 +17,8 @@ import Header from '@/components/common/Header';
 import Footer from '@/components/common/Footer';
 
 export const metadata: Metadata = {
-  title: 'Student Projects & Real-time Labs | Ananta Gopal Enterprises',
-  description: 'Hands-on student projects and real-time lab setups for Embedded Systems, IoT, Cloud Security, Hardware & Networking, Web & Mobile Development. Professional training and project guidance.',
+  title: 'Student Projects & Real-time Labs | AGEITS - Ananta Gopal Enterprises',
+  description: 'Hands-on student projects and real-time lab setups for Embedded Systems, IoT, Cloud Security, Hardware & Networking, Web & Mobile Development. Professional training and project guidance by AGEITS.',
   keywords: [
     'student projects',
     'real-time labs',
@@ -29,10 +29,31 @@ export const metadata: Metadata = {
     'mobile development',
     'hardware networking',
     'student training',
-    'project guidance'
+    'project guidance',
+    'Arduino projects',
+    'Raspberry Pi',
+    'wireless sensor networks',
+    'MQTT protocols',
+    'cloud platform integration',
+    'data analytics visualization',
+    'smart home automation',
+    'encryption data protection',
+    'identity access management',
+    'AWS Azure GCP setup',
+    'infrastructure as code',
+    'container orchestration',
+    'network infrastructure',
+    'server administration',
+    'React Next.js Vue.js',
+    'Node.js Python PHP',
+    'API development',
+    'React Native Flutter',
+    'iOS Android development',
+    'AGEITS',
+    'Ananta Gopal Enterprises'
   ].join(', '),
   openGraph: {
-    title: 'Student Projects & Real-time Labs | Ananta Gopal Enterprises',
+    title: 'Student Projects & Real-time Labs | AGEITS - Ananta Gopal Enterprises',
     description: 'Hands-on student projects and real-time lab setups for Embedded Systems, IoT, Cloud Security, Hardware & Networking, Web & Mobile Development.',
     url: '/students',
     images: [
@@ -40,14 +61,14 @@ export const metadata: Metadata = {
         url: '/og-students.jpg',
         width: 1200,
         height: 630,
-        alt: 'Student Projects and Real-time Labs',
+        alt: 'Student Projects and Real-time Labs - AGEITS',
       },
     ],
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Student Projects & Real-time Labs | Ananta Gopal Enterprises',
+    title: 'Student Projects & Real-time Labs | AGEITS - Ananta Gopal Enterprises',
     description: 'Hands-on student projects and real-time lab setups for Embedded Systems, IoT, Cloud Security, Hardware & Networking, Web & Mobile Development.',
     images: ['/og-students.jpg'],
   },

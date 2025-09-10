@@ -21,16 +21,14 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ||
-    (process.env.NODE_ENV === 'production' ? 'https://www.ageits.com' : 'http://localhost:3000')),
+  metadataBase: new URL('https://www.ageits.com'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: process.env.NEXT_PUBLIC_SITE_URL ||
-      (process.env.NODE_ENV === 'production' ? 'https://www.ageits.com' : 'http://localhost:3000'),
+    url: 'https://www.ageits.com',
     siteName: 'Ananta Gopal Enterprises',
     title: 'Ananta Gopal Enterprises - Professional Services',
     description: 'Professional business services with quality products and exceptional customer service.',
@@ -78,10 +76,8 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Ananta Gopal Enterprises",
-    "url": process.env.NEXT_PUBLIC_SITE_URL ||
-      (process.env.NODE_ENV === 'production' ? "https://www.ageits.com" : "http://localhost:3000"),
-    "logo": `${process.env.NEXT_PUBLIC_SITE_URL ||
-      (process.env.NODE_ENV === 'production' ? "https://www.ageits.com" : "http://localhost:3000")}/logo.jpg`,
+    "url": "https://www.ageits.com",
+    "logo": "https://www.ageits.com/logo.jpg",
     "description": "Professional business services with quality products and exceptional customer service. Specializing in IT services, cybersecurity, cloud solutions, and comprehensive business technology solutions.",
     "foundingDate": "2015",
     "contactPoint": {
